@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale:0.25, maximum-scale:1.6, user-scalable=yes;" />
+	<meta name="author" content="Gordon Mei" />
+	<title>Beachballing - Mac OS X - Studio Gordon Mei - Lab</title>
+	<style type="text/css">
+		* {margin:0; padding:0; font:normal 14pt "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue","Helvetica","Arial",sans-serif; font-weight:300;}
+		body {margin:2em 5em;}
+		a:link, a:visited, a:focus, a:active {color:#009aff;}
+		a:hover {color:#ff5c80; text-decoration:line-through;}
+		#beachballcontainer {background:url("bkgdosxbeachball.png"); width:256px; height:257px;}
+
+		#sosumi {margin:1em 0; font-size:10pt;}
+		#sosumi a {font-size:10pt;}
+	</style>
+
+	<link rel="shortcut icon" href="../../favico.png" type="image/png" />
+</head>
+<body>
+
+	<div id="beachballcontainer">
+		<img src="foregdosxbeachball.png" id="beachball" alt="Beachballing" width="256" height="257" />
+	</div>
+
+	<div id="sosumi">2010. <a href="http://www.monstercyb.org/gordon/lab">Monstercyb.org</a>. A part of the <a href="http://www.ocf.berkeley.edu/~gordeon">GordeonBleu</a> network.</div>
+
+	<script type="text/javascript">
+	function animator() {
+		window.setInterval(spinBallAgain, 50);
+	}
+
+	var currentangle = 0;
+
+	function spinBallAgain() {
+		var beachball = document.getElementById("beachball");
+
+		currentangle += 5;
+		if (currentangle >= 360) {
+			currentangle -= 360;
+		}
+
+		beachball.style.WebkitTransform = "rotate(" + currentangle + "deg)";
+		beachball.style.MozTransform = "rotate(" + currentangle + "deg)";
+		beachball.style.OTransform = "rotate(" + currentangle + "deg)";
+		beachball.style.transform = "rotate(" + currentangle + "deg)";
+	}
+
+	window.addEventListener("load", function(e) {animator();}, false);
+	// no transform support in IE 8 and earlier, so no need to normalize event handling
+	</script>
+
+	<!--Created: 2010 April 21-->
+	<!--Spinners and background sphere separated using Photoshop-->
+
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		try {
+		var pageTracker = _gat._getTracker("UA-299058-9");
+		pageTracker._trackPageview();
+		} catch(err) {}</script>
+</body>
+</html>

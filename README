@@ -1,0 +1,3 @@
+2010 April 21. Beachballing. Inspired by the spinning beachball cursor from Mac OS X.
+Tested as working in: Firefox, Chrome, Safari, Opera 10.5+, MobileSafari.
+Should also work everywhere else once those browsers support 2d transforms.
